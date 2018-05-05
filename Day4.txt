@@ -1,0 +1,72 @@
+一.H5中出现新的表单类型
+type
+		   email 用于验证邮箱 当表单提交时自动的输入邮箱格式进行验证
+		   url 用于验证url地址格式 当表单提交时自动对网址的格式验证
+		   number 数字 value表单的默认值  step每次增加减少的值 指定最大值最小值max min
+		   range 数字区域 用于包含一定范围的数字区域 滑块来展示数字 默认1-100 max min step
+		   tel 用于验证输入的电话类型是否正确
+		   search 搜索框 输入内容时可以去全部清除内容
+		   color 取色器颜色拾取器
+		         日期和时间类型 h5中提供了新的日期和时间输入方式
+		    date 年月日   month年月 week 年和周
+		    time 时间  datatime-local日期时间
+		   
+		<form action="#" method="get">
+			邮箱：<input type="email" />
+			网址：<input type="url" />
+			年龄：<input type="number"value="6" step="5" max="100" min="0"/><br />
+			<input type="range" max="100" min="20" value="20"/>
+			<input type="submit" />
+			电话：<input type="tel" />
+			搜索框：<input type="search" />
+			取色器：<input type="color" />
+			日期时间类型：<input type="week" />
+			时间(小时分钟)：<input type="time" />
+			日期时间<input type="datetime-local" />
+二.css样式表 高内聚低耦合 文件之间的关联不要太紧密
+1概述
+1.CSS 指层叠样式表 (Cascading Style Sheets)
+2.主要作用：美化网页
+3.css发展史CSS1.0
+     1998年CSS2.0
+     2004年CSS2.1
+     2010年CSS3.0
+         1）代码简洁 性能兼容效果好
+         2) 代码精简实用
+         3）适用于移动端的开发
+2.2 css应用方式
+1）行内样式 在需要美化的标签中加入style属性
+语法结构：style=“css出行名称1：属性值；css出行名称2：属性值”
+2）内部样式表:（在html页面中定义的样式）
+ <head>
+     <style type=“text/css”>
+      具体美化内容
+      标签名{
+             css属性名称1：属性值；}
+     </style>
+ <head>
+注意：1.type=“text/css”可以省略不谢 默认不谢建议写上
+      2.美化的最后一条；可以省略
+      3.style可以定义在页面的任意位置，但是为了让样式有限加载要求将style放到head标签中加载
+3）外部样式
+html页面与css美化文件分开
+先编写html文件 在编写css文件 在htmk页面中导入css文件产生关联
+导入方式  导入式<style>
+           @import url(css文件路径）
+             </style>
+  外链式 <link rel=“stylesheet”type=“text/css”herf=“css文件路径”
+
+link和import的区别
+（1）祖宗不同
+link属于标签 @import是css中提供的方式
+link标签出来可以加载css之外，可以做其他事情。@import只能加载css
+（2）加载顺序有差别
+当浏览器打开html页面时，link引用的css会同时被加载，@import当页面下载完成后加载，
+（3）兼容性区别
+@import css2.1出现 老的浏览器不支持 @import	IE5以上支持
+link标签没有这个问题
+
+
+
+
+三.css样式表中的属性
